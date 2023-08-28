@@ -40,15 +40,7 @@ const Navbar = () => {
     </li>
 
     <li className='navItem'>
-    <a href='#' className='navLink'>Tienda</a>
-    </li>
-
-    <li className='navItem'>
     <a href='#' className='navLink'>Nosotros</a>
-    </li>
-
-    <li className='navItem'>
-    <a href='#' className='navLink'>Páginas</a>
     </li>
 
     <li className='navItem'>

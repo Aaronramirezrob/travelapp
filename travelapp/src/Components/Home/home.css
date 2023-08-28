@@ -109,14 +109,14 @@
 .home .homeContent .cardDiv .input input::placeholder {
   font-size: 13px;
 }
-.home .homeContent .cardDiv .input .icon {
+/* .home .homeContent .cardDiv .input .icon {
   font-size: 20px;
   color: var(--PrimaryColor) !important;
   margin-left: 10px;
 }
 .home .homeContent .cardDiv .input .input[type=range] {
   background: blue;
-}
+} */
 .home .homeContent .cardDiv .searchOptions {
   position: absolute;
   background: var(--GradientColor);

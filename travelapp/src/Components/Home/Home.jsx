@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React,{useEffect, useState} from 'react';
 import "./home.css";
 import video from "../../Assets/ocean-65560.mp4";
 import {GrLocation} from "react-icons/gr";
@@ -12,10 +12,40 @@ import {TbApps} from "react-icons/tb";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
+import {Slider, RangeSlider, Row, Col, InputGroup, InputNumber} from "rsuite";
+
 const Home = () => {
   useEffect(() => {
-    Aos.init({duration: 2000})
+    Aos.init({duration: 1400})
   }, [])
+
+  function PriceSlider() {
+    const [value, setValue] = React.useState(0);
+    return (
+      <Row>
+        <Col md={10}>
+          <Slider
+            progress
+            style={{ marginTop: 16 }}
+            value={value}
+            onChange={value => {
+              setValue(value);
+            }}
+          />
+        </Col>
+        <Col md={4}>
+          <InputNumber
+            min={0}
+            max={100}
+            value={value}
+            onChange={value => {
+              setValue(value);
+            }}
+          />
+        </Col>
+      </Row>
+    );
+  }
 
 
   return (
@@ -55,10 +85,9 @@ const Home = () => {
     <div className='priceInput'>
     <div className='label_total flex'>
     <label htmlFor='price'>Limite de precios: </label>
-    <h3 className='total'>$5000</h3>
     </div>
     <div className='input flex'>
-    <input type="range" max="5000" min="1000"/>
+      {PriceSlider}
     </div>
     </div>
 
